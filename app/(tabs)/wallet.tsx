@@ -1,12 +1,18 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { SafeAreaView } from 'react-native-safe-area-context';
+import TopInfo from '@/components/TopInfo';
+import CardSlider from '@/components/CardSlider';
+import MoneyInfo from '@/components/MoneyInfo';
+import QuickActions from '@/components/QuickActions';
 
-const Wallet = () => {
+export default function Home() {
   return (
-    <View>
-      <Text>Wallet</Text>
-    </View>
-  )
-}
+    <SafeAreaView className="flex flex-1 py-6 bg-white px-6 font-sans">
 
-export default Wallet
+      <TopInfo />
+      <CardSlider />
+      <MoneyInfo />
+      <QuickActions />
+
+    </SafeAreaView>
+  );
+}
